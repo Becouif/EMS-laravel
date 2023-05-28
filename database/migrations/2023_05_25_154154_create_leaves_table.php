@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('leaves', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id');
+            $table->date('from');
+            $table->date('to');
+            $table->string('type');
+            $table->string('description');
+            $table->integer('status')->default(0);
+            $table->text('message');
             $table->timestamps();
         });
     }

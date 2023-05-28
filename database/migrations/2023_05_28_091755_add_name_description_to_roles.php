@@ -11,15 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('notices', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->text('description');
-            $table->date('date');
+        Schema::table('roles', function (Blueprint $table) {
             $table->string('name');
-
-
-            $table->timestamps();
+            $table->text('description')->nullable();
         });
     }
 
@@ -28,6 +22,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('notices');
+        Schema::table('roles', function (Blueprint $table) {
+            //
+        });
     }
 };

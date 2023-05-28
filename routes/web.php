@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\RoleController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +27,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/landing',function(){
     return view('admin.layouts.master');
 });
+
+Route::resource('departments',DepartmentController::class);
+
+Route::resource('roles',RoleController::class);

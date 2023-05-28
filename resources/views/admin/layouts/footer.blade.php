@@ -21,4 +21,37 @@
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="{{asset('template/js/datatables-simple-demo.js')}}"></script>
     </body>
+
+     <!-- DataTables JS -->
+  <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+
+<!-- Initialize DataTable -->
+<script>
+  $(document).ready(function() {
+    $('#myTable').DataTable();
+  });
+
+function confirmDelete(){
+  return alert('do you want to delete?');
+}
+</script>
+
+
+    <!-- start of style CSS  -->
+    <style>
+    /* Additional custom styling for breadcrumbs */
+    .custom-breadcrumb .breadcrumb-item a {
+      color: #6c757d;
+      text-decoration: none;
+    }
+
+    .custom-breadcrumb .breadcrumb-item a:hover {
+      color: #333;
+      text-decoration: underline;
+    }
+
+    .custom-breadcrumb .breadcrumb-item.active {
+      color: #333;
+    }
+  </style>
 </html>
