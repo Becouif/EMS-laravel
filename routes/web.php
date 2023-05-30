@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\RoleController;
-
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +31,5 @@ Route::get('/landing',function(){
 Route::resource('departments',DepartmentController::class);
 
 Route::resource('roles',RoleController::class);
+
+Route::resource('users',UserController::class);

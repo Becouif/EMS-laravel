@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Role;
+use App\Models\Department;
 
 class User extends Authenticatable
 {
@@ -21,6 +23,13 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'address',
+        'department_id',
+        'role_id',
+        'designation',
+        'image',
+        'start_from',
+        'mobile_number'
     ];
 
     /**
@@ -42,4 +51,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function department(){
+         return $this->hasOne(Department::class,'id','department_id');
+    }
+
+    public function role(){
+        return $this->hasOne(Role::class,'id','role_id');
+    }
 }

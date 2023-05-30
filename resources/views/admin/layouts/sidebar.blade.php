@@ -33,7 +33,21 @@
                                     <a class="nav-link" href="{{route('departments.index')}}">View Department</a>
                                 </nav>
                             </div>
+                            <!-- start of side bar for users  -->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#user" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Users
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="user" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="{{route('users.create')}}">Register User</a>
+                                    <a class="nav-link" href="{{route('users.index')}}">View Users</a>
+                                </nav>
+                            </div>
+                            <!-- end of side bar for users  -->
 
+                            <!-- start of nested nested  -->
                             <!-- start of pages  -->
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
@@ -66,6 +80,8 @@
                                     </div>
                                 </nav>
                             </div>
+                            <!-- end of nested side bar nav  -->
+                            
                             <div class="sb-sidenav-menu-heading">Addons</div>
                             <a class="nav-link" href="charts.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
