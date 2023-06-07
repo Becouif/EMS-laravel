@@ -50,7 +50,7 @@
                         </tr>
                         <tr>
                           <th scope="row">Role</th>
-                          <td><input type="checkbox" name="name[role] ['can-add']" value="1" id=""></td>
+                          <td><input type="checkbox" name="name[role]['can-add']" value="1" id=""></td>
                           <td><input type="checkbox" name="name[role] ['can-edit']" value="1" id=""></td>
                           <td><input type="checkbox" name="name[role] ['can-view']" value="1" id=""></td>
                           <td><input type="checkbox" name="name[role] ['can-delete']" value="1" id=""></td>

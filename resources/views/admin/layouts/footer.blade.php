@@ -22,6 +22,22 @@
         <script src="{{asset('template/js/datatables-simple-demo.js')}}"></script>
     </body>
 
+
+    <!-- jqueryui link  -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+    <script>
+  $( function() {
+    $( "#datepicker1" ).datepicker();
+  } );
+  </script>
+
+
+
      <!-- DataTables JS -->
   <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 

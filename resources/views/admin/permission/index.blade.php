@@ -26,6 +26,7 @@
                       <th>S/N</th>
                       <th>Name</th>
                       <th>Edit</th>
+                      <th>Delete</th>
                     </tr>
 
                     </thead>
@@ -39,7 +40,15 @@
 
                         <td><a href="{{route('permissions.edit',[$permission->id])}}"><i class="fa-regular fa-pen-to-square"></i></a></td>
                         
-                        
+                        <td>
+                          <form action="{{ route('permissions.destroy', [$permission->id]) }}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" onclick="return confirmDelete()">
+                              <i class="fa-regular fa-trash-can"></i>
+                            </button>
+                          </form>
+                        </td>
                       </tr>
                       @endforeach
                       @else

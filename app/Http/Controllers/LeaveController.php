@@ -3,17 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Permission;
-class PermissionController extends Controller
+use App\Models\Leave;
+
+class LeaveController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $permissions = Permission::get();
-        return view('admin.permission.index',compact('permissions'));
-
+        //
     }
 
     /**
@@ -21,7 +20,7 @@ class PermissionController extends Controller
      */
     public function create()
     {
-        return view('admin.permission.create');
+       return view('admin.leave.create');
     }
 
     /**
@@ -29,11 +28,7 @@ class PermissionController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
-            'role_id' =>'required|unique:permissions'
-        ]);
-        Permission::create($request->all());
-        return redirect()->route('permissions.create')->with('message','permission updated!');
+        //
     }
 
     /**
@@ -49,8 +44,7 @@ class PermissionController extends Controller
      */
     public function edit(string $id)
     {
-        $permission = Permission::find($id);
-        return view('admin.permission.edit',compact('permission'));
+        //
     }
 
     /**
@@ -66,9 +60,6 @@ class PermissionController extends Controller
      */
     public function destroy(string $id)
     {
-        $permission = Permission::find($id)->delete();
-        return redirect()->route('permissions.index')->with('message','permission successfully deleted');
-
-
+        //
     }
 }
