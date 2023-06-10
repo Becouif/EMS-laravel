@@ -6,7 +6,8 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\LeaveController;
-
+use App\Http\Controllers\NoticeController;
+use App\Http\Controllers\MailController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,5 +40,9 @@ Route::group(['middleware'=>'auth'],function(){
     Route::resource('users',UserController::class);
     Route::resource('permissions',PermissionController::class);
     Route::resource('leaves',LeaveController::class);
+    Route::resource('notices',NoticeController::class);
+
+    // get route for mail 
+    Route::get('/mail',[MailController::class, 'create']);
 });
 

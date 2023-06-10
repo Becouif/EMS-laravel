@@ -46,6 +46,19 @@
                                 </nav>
                             </div>
                             <!-- end of side bar for users  -->
+                                                        <!-- start of side bar for leave  -->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#leave" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Leave
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="leave" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="{{route('leaves.create')}}">Create Leave</a>
+                                    <a class="nav-link" href="{{route('leaves.index')}}">View Leave</a>
+                                </nav>
+                            </div>
+                            <!-- end of side bar for leave  -->
                              <!-- start of side bar for permission  -->
                              <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#permission" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
@@ -59,6 +72,19 @@
                                 </nav>
                             </div>
                             <!-- end of side bar for permission  -->
+                            <!-- start of notice section  -->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#notice" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Notice
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="notice" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="{{route('notices.create')}}">Create Notice</a>
+                                    <a class="nav-link" href="{{route('notices.index')}}">View Notices</a>
+                                </nav>
+                            </div>
+                            <!-- end of notice section  -->
 
                             <!-- start of nested nested  -->
                             <!-- start of pages  -->
