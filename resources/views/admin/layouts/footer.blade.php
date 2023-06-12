@@ -22,9 +22,9 @@
         <script src="{{asset('template/js/datatables-simple-demo.js')}}"></script>
     </body>
 
+            <!-- jqueryui link  -->
+            <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
-    <!-- jqueryui link  -->
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   <script>
   $( function() {
     $( "#datepicker" ).datepicker({
@@ -57,6 +57,30 @@ function confirmDelete(){
   return alert('do you want to delete?');
 }
 </script>
+
+<!-- script for dropdowns  -->
+<script type="text/javascript">
+
+$(document).ready(function(){
+  $("#mail").on("change",function(){
+    if(this.value=="1"){
+      $("#departmentInput").show();
+    } else {
+      $("#departmentInput").hide();
+    }
+
+    if(this.value=="2"){
+      $("#userInput").show();
+    } else {
+      $("#userInput").hide()
+    }
+  })
+})
+
+
+
+</script>
+
 
 
     <!-- start of style CSS  -->

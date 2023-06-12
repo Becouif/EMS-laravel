@@ -44,5 +44,6 @@ Route::group(['middleware'=>'auth'],function(){
 
     // get route for mail 
     Route::get('/mail',[MailController::class, 'create']);
+    Route::post('/mail',[MailController::class, 'store'])->name('mail.store');
 });
 
